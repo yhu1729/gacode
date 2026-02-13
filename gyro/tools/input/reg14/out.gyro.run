@@ -1,0 +1,184 @@
+[Parsing data in input.gyro]
+ -----------------------------------------------
+ operational mode     : INITIAL VALUE
+ boundary conditions  : PERIODIC
+ profiles             : EXPERIMENTAL (flattened)
+ geometry             : MODEL SHAPE
+ electron_method      : IMPLICIT DRIFT-KINETIC ELECTRONS
+ fluctuations         : EM: (Phi,A_par)
+ gyro_method          : ORIGINAL (INTEGRATED) POLARIZATION
+ fluctuation output   : PHI( ) N( ) E( ) V( )                   
+ integrator_method    : IMEX2
+ source_method        : NO SOURCE
+ pitch-angle coll.    : RBF r^3
+ z_eff_method         : Use Z_EFF from input.profiles
+ nonlinear dynamics   : OFF
+ linear diffusivity   : RESPONSE FUNCTION
+ -----------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) Initialized multi-threaded MPI
+----------------------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) You are using TOROIDAL_REFERENCE=-1
+----------------------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) TOROIDAL_REFERENCE reset to lowest nonzero mode.
+----------------------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) Resetting IPCCW and BTCCW based on input.gacode.
+----------------------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) Taking densities directly from input.profiles
+----------------------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) Remapping into periodic domain.
+----------------------------------------------------------
+----------------------------------------------------------
+INFO: (GYRO) nu_ii rescaled by: 0.000
+----------------------------------------------------------
+ ----------- SPARSE MATRIX STATS ---------------
+ EXPLICIT POISSON:     n>0           
+         nonzeros:     1296
+           values:     3924
+          indices:     5257
+       iterations:        1
+
+  EXPLICIT AMPERE:     n>0           
+         nonzeros:     1080
+           values:     3708
+          indices:     4393
+       iterations:        1
+
+      TOTAL FIELD:     n>0           
+         nonzeros:     2808
+           values:    13248
+          indices:    11377
+       iterations:        2
+
+ ---------------- PARLLELISM DIMENSIONS --------------------
+ MPI tasks            :    2
+ OpenMP threads       :    4
+ ----------------- GRID DIMENSIONS -------------------------
+ n_n                  :    1
+ n_x                  :    6
+ n_stack              :   20
+ n_blend              :    6
+ n_pass               :    4
+ n_trap               :    4
+ n_energy             :    8
+ n_field              :    2
+ --
+ n_spec               :    2
+ n_ion                :    1
+ n_kinetic            :    2
+ n_gk                 :    1
+ indx_e               :    2
+ --
+ FIELD POINTS:        :        72
+ DIST. POINTS:        :     15360
+ --
+ energy_max           :   6.000000
+ dt                   :   0.100000
+ --------------------- LOCAL PARAMETERS --------------------
+  NOTE: use abs(SAFETY_FACTOR) as input
+ # RADIUS [INPUT]     :   0.600000
+ .RADIUS              :   0.600000
+ .ASPECT_RATIO        :   2.817153
+ .SHIFT               :  -0.087386
+ .ZMAG                :   0.058508
+ .DZMAG               :   0.024225
+ .KAPPA               :   1.309262
+ .S_KAPPA             :   0.063275
+ .DELTA               :   0.122668
+ .S_DELTA             :   0.151647
+ .ZETA                :  -0.005806
+ .S_ZETA              :  -0.017470
+ .SAFETY_FACTOR       :   1.902041
+ .SHEAR               :   0.767632
+ .RHO_STAR            :   0.003155
+ .Z_EFF               :   1.330057
+ .MACH                :  -0.276194
+ .PGAMMA              :  -0.626573
+ .GAMMA_E             :   0.070160
+ .NU_EI               :   0.135521
+ .IPCCW               :   1.000000
+ .BTCCW               :  -1.000000
+ # Ion  1
+ .NI_OVER_NE          :   0.885054
+ .TI_OVER_TE          :   0.863096
+ .DLNNDR              :   0.836476
+ .DLNTDR              :   1.776724
+ .Z                   :   1.000000
+ (NU_II)              :   0.000000
+ .MU                  :   1.000000
+ # Electrons
+ .DLNNDR_ELECTRON     :   1.026134
+ .DLNTDR_ELECTRON     :   2.760567
+ (Z_ELECTRON)         :  -1.000000
+ .BETAE_UNIT          :   0.000828
+ .MU_ELECTRON         :  60.000000
+ ------------- LOCAL PARAMETERS (diagnostic) ---------------
+ n_i*z_i - n_e:       :  -0.114946
+ r/R0                 :   0.212981
+ rho_norm             :   0.544364
+ b_unit               :   2.919989
+ beta_unit_norm       :   0.001460
+ betai_unit           :   0.000632
+ betae_unit_norm      :   0.000828
+ beta_*               :   0.004788
+ alpha_MHD            :   0.048795
+ lambda_*             :   0.000000
+ volume (1/a^3)       :  25.913839
+ omega_00 (c_s/a)     :  -0.098040
+ * Note that f = f_sim exp(i n omega0[r0] t)
+ ----------- ALFVEN WAVE PARAMETERS (diagnostic) -----------
+ (v_A/c_s)            :  52.244197
+ Omega_TAE            :  -4.875036
+ Omega_A              :  -9.750072
+ ------------------- UPWIND PARAMETERS ---------------------
+ radial_upwind        :   1.000000
+ orbit_upwind         :   1.000000
+ orbit_upwind (elec)  :   0.000000
+ --------------- RADIAL DOMAIN PARAMETERS ------------------
+ box_multiplier       :   1.000000
+ L/a                  :   0.013698
+ --
+ explicit_damp        :   0 (  1.0000)
+ --
+ LEFT : r_a           :   0.593151
+ LEFT : r_a_physical  :   0.593151
+ NORM : r(ir_norm)    :   0.600000
+ RIGHT: r_b_physical  :   0.604566
+ RIGHT: r_b           :   0.604566
+ ----------- PARALLELIZATION PARAMETERS --------
+ (nek) per subgroup:  :        32
+ (ine) per subgroup:  :        24
+ ----------- TIME STEPPING PARAMETERS ----------
+ time_skip            :    20
+ restart_data_skip    :    10
+ ----------- STABILITY PARAMETERS ----------------
+ d/dtau Courant       :   6.133074
+   d/dr Courant       :   0.594232
+ Log(RBF Cond. num.)  :   7.195497
+ ------------- CENTRAL WAVENUMBERS SIMULATED ---------------
+     (k_y = nq/r, rho = rho_sD_unit)
+ n =   -30   k_y rho =  0.300 [ 0.300][ 0.300]
+  
+ min resolved k_x*rho_sD :  1.446951
+ max resolved k_x*rho_sD :  2.170427
+ --------------- CENTRAL BOX SIZE -----------------
+ abs(Lx/rho_sD)       :     4.342361
+ abs(Ly/rho_sD)       :    20.943951
+ => abs(dx/rho_sD)    :     0.723727
+ --------------------------------------------------
+ ------------ GYRO-OPERATOR BANDWIDTH -------------
+ => EXACT BESSEL.
+ --------------------------------------------------
+ Startup time         :   0.146387
+ --------------------------------------------------
+ PLEASE SEE: 
+  - out.gyro.units for normalizing parameters
+  - out.gyro.memory for memory usage
+  - out.gyro.efficiency for parallelization efficiency
+  - out.gyro.phase_space for velocity-space nodes and weights
+ STATUS: clean exit                                                                      

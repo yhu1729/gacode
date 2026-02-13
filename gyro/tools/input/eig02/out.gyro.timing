@@ -1,0 +1,5 @@
+Field     Field     Velocity  Field     Field     Gyroave   Implicit  RHS       Coll.     Coll.     Nonlinear Nonlinear Diagnos.  Diagnos.  Full      
+interp.a  interp.b  sum       explicit  implicit  h         he        total     step      comm      step      comm      allstep   datastep  step      
+--------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- 
+0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
