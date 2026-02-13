@@ -34,8 +34,13 @@ F2PY    = f2py
 
 # System math libraries
 
+ifneq ($(wildcard /opt/local/lib/libfftw3.a),)
 LMATH = /opt/local/lib/libfftw3.a /opt/local/lib/libfftw3f.a
 FFTW_INC = /opt/local/include 
+else
+LMATH = /opt/homebrew/lib/libfftw3.a /opt/homebrew/lib/libfftw3f.a
+FFTW_INC = /opt/homebrew/include
+endif
 
 ifdef FANN_ROOT
    # neural net libraries
@@ -44,8 +49,13 @@ endif
 
 # NetCDF libraries
 
+ifneq ($(wildcard /opt/local/lib/libnetcdf.a),)
 NETCDF = -L/opt/local/lib -lnetcdff -L/opt/local/lib -Wl,-headerpad_max_install_names -lnetcdf -lnetcdf
 NETCDF_INC = /opt/local/include
+else
+NETCDF = -L/opt/homebrew/lib -lnetcdff -L/opt/homebrew/lib -Wl,-headerpad_max_install_names -lnetcdf -lnetcdf
+NETCDF_INC = /opt/homebrew/include
+endif
  
 # Archive
 
