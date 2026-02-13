@@ -1,4 +1,4 @@
-from gacodeinput import *
+from pygacode.gacodeinput import *
 import sys
 
 x = SimpleInput()
