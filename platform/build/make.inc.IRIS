@@ -21,7 +21,7 @@ LMATH = -mkl
 FFTW_INC=${MKLROOT}/include/fftw/
 
 # NetCDF
-NETCDF = -L/fusion/projects/theory/HPC/fortran/lib -lnetcdff -L/fusion/projects/theory/HPC/netcdf/lib -lnetcdf -lnetcdf -ldl -lm
+NETCDF = -L/fusion/projects/theory/HPC/fortran/lib -lnetcdff -L/fusion/projects/theory/HPC/netcdf/lib -lnetcdf -ldl -lm
 NETCDF_INC = ${HPC}/fortran/include 
 
 # Archive 

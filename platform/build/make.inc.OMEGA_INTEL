@@ -21,7 +21,7 @@ LMATH = -mkl
 FFTW_INC=${MKLROOT}/include/fftw/
 
 # NetCDF
-NETCDF = -L${NETCDF_DIR}/lib -lnetcdff -L${NETCDF_DIR}/lib -lnetcdf -lnetcdf -lz -lcurl -lm
+NETCDF = -L${NETCDF_DIR}/lib -lnetcdff -L${NETCDF_DIR}/lib -lnetcdf -lz -lcurl -lm
 NETCDF_INC = ${NETCDF_DIR}/include
 
 # Archive 

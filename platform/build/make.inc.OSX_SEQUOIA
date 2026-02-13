@@ -50,10 +50,10 @@ endif
 # NetCDF libraries
 
 ifneq ($(wildcard /opt/local/lib/libnetcdf.a),)
-NETCDF = -L/opt/local/lib -lnetcdff -L/opt/local/lib -Wl,-headerpad_max_install_names -lnetcdf -lnetcdf
+NETCDF = -L/opt/local/lib -lnetcdff -L/opt/local/lib -Wl,-headerpad_max_install_names -lnetcdf
 NETCDF_INC = /opt/local/include
 else
-NETCDF = -L/opt/homebrew/lib -lnetcdff -L/opt/homebrew/lib -Wl,-headerpad_max_install_names -lnetcdf -lnetcdf
+NETCDF = -L/opt/homebrew/lib -lnetcdff -L/opt/homebrew/lib -Wl,-headerpad_max_install_names -lnetcdf
 NETCDF_INC = /opt/homebrew/include
 endif
  

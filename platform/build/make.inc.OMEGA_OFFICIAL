@@ -23,7 +23,7 @@ LMATH = ${ROOT}/OpenBLAS/libopenblas.a $(FFTWDIR)/libfftw3.a $(FFTWDIR)/libfftw3
 FFTW_INC=/home/candy/include
 
 # OPTIONAL NetCDF:
-NETCDF=-L${NETCDF_F_DIR}/lib -lnetcdff -L${NETCDF_DIR}/lib -lnetcdf -lnetcdf -lm -ldl
+NETCDF=-L${NETCDF_F_DIR}/lib -lnetcdff -L${NETCDF_DIR}/lib -lnetcdf -lm -ldl
 NETCDF_INC=${NETCDF_F_DIR}/include
 
 # Archive 
